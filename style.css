@@ -46,10 +46,20 @@ body {
     opacity: 0;
     animation: appear 1s ease forwards, move 3s ease infinite alternate;
 }
+.music_button{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    z-index: 10000;
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 30px;
+}
 .animated_march_text2 {
     padding-top: 2em;
     font-family: Arial, sans-serif;
-    font-size: 2em;
+    font-size: 3em;
     background: linear-gradient(to bottom, #4ad382, #3faeec);
     -webkit-background-clip: text; /* Для кроссбраузерной поддержки */
     -webkit-text-fill-color: transparent; /* Для кроссбраузерной поддержки */

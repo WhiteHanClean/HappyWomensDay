@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Title</title>
+    <title>C 8-ым марта!</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="not-loaded">
@@ -12,12 +12,19 @@
         <h1 class="animated_march_text2">с уважением DarkWonder7</h1>
       </div>
     </div>
-    <div class="flowers">
-      <audio
-        src="./assets/Andy Grammer - Don't Give Up On Me (OST Five Feet Apart).mp3"
-        autoplay="autoplay"
-      ></audio>
 
+    <audio
+      src="./assets/Andy Grammer - Don't Give Up On Me (OST Five Feet Apart).mp3"
+      type="audio/mp3"
+      allow="autoplay"
+      id="audio"
+      style="display: none"
+    ></audio>
+    <button onclick="toggleMusic()" class="music_button">
+      Включить музыку
+    </button>
+
+    <div class="flowers">
       <div class="flower flower--1">
         <div class="flower__leafs flower__leafs--1">
           <div class="flower__leaf flower__leaf--1"></div>
@@ -329,6 +336,19 @@
     </div>
     <script src="java.js"></script>
     <script defer src="/_vercel/insights/script.js"></script>
-
+    <script>
+      function toggleMusic() {
+        var audio = document.getElementById("audio");
+        if (audio.paused) {
+          audio.play();
+          document.querySelector(".music_button").textContent =
+            "Выключить музыку";
+        } else {
+          audio.pause();
+          document.querySelector(".music_button").textContent =
+            "Включить музыку";
+        }
+      }
+    </script>
   </body>
 </html>
